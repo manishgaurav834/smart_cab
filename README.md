@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Smart Cab Allocation System - MoveInSync
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
+This project implements a Smart Cab Allocation System using the MERN stack. The system features robust user authentication, a cab allocation algorithm based on Dijkstra's algorithm using Breadth-First Search (BFS), and real-time location tracking within a 50x50 grid city layout.
 
-## Available Scripts
+## Tech-Stack Used
+- ReactJS
+- NodeJS
+- ExpressJS
+- Mongoose
+- MongoDB
+- Tailwind CSS
 
-In the project directory, you can run:
+## Demo vedio -
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Algorithm
+- **Cab Allocation Algorithm:** Implemented using Dijkstra's algorithm with BFS for shortest path calculation.
+- **Grid Layout:** The city is represented as a 50x50 grid, where each cell is a node.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Assumption
+The city is modeled as a grid with each location represented by x and y coordinates. Cabs move only on roads connecting points in four directions: left, right, bottom, and top. All cabs move at the same speed, covering one unit in any direction per minute.
 
-### `npm test`
+## Features
+- Robust User Authentication
+- Real-Time Location Tracking
+- Cab Allocation Optimization
+- Employee Cab Search Optimization
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+The Smart Cab Allocation System effectively addresses the problem statement through efficient algorithms, real-time data integration, and comprehensive error handling. The system ensures high performance, scalability, and user satisfaction.
