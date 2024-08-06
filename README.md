@@ -11,7 +11,7 @@ This project implements a Smart Cab Allocation System using the MERN stack. The 
 - MongoDB
 - Tailwind CSS
 
-## Demo vedio -
+## Demo vedio - https://drive.google.com/file/d/1X2frcQc_R2gmr-Wk2Ueoal0d1QGd7uh0/view?usp=drive_link
 
 
 ## Algorithm
