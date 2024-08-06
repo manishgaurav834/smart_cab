@@ -168,67 +168,11 @@ const Home = () => {
                   className="bg-black/50 text-white hover:scale-105 hover:opacity-95 cursor-pointer font-bold sm:text-xl mx-2 border-2 border-white rounded-md w-32 p-1 h-10"
                 ></input>
               </form>
+              
             </div>
-            <div className="flex relative flex-col items-center bg-black/70 p-4 rounded-md  h-4/5 w-full pb-10">
-              <div className="h-16 w-full flex items-center justify-start">
-                <div className="text-white font-bold text-xl mb-2">Curr rides</div>
-              </div>
-              <div className="relative w-full mb-4 bg-black/30 rounded-md flex flex-col overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-black/60">
-                {sortedcab.map((element, key) => {
-                  return (
-                    <div key={key} className={`pb-2 ${(element.status && element.curr) ? "block" : "hidden"}`}>
-                      <Info
-                        a={1}
-                        id={element._id}
-                        curr={element.curr}
-                        sx={cred.pickupX}
-                        sy={cred.pickupY}
-                        dx={cred.destX}
-                        dy={cred.destY}
-                        name={element.D_name}
-                        time={element.time}
-                        t={element.t}
-                        X={element.X}
-                        Y={element.Y}
-                        status={element.status}
-                        isBooked={element.curr}
-                        onStatusChange={handleStatusChange}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-              <div className="h-16 w-full flex items-center justify-start">
-                <div className="text-white font-bold text-xl mb-2">New rides</div>
-              </div>
-              <div className="relative w-full bg-black/30 rounded-md flex flex-col overflow-y-auto scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-black/60">
-                {sortedcab.map((element, key) => {
-                  return (
-                    <div key={key} className={`pb-2 ${(!element.status || !element.curr) ? "block" : "hidden"}`}>
-                      <Info
-                        a={0}
-                        id={element._id}
-                        curr={element.curr}
-                        sx={cred.pickupX}
-                        sy={cred.pickupY}
-                        dx={cred.destX}
-                        dy={cred.destY}
-                        name={element.D_name}
-                        time={element.time}
-                        t={element.t}
-                        X={element.X}
-                        Y={element.Y}
-                        status={element.status}
-                        isBooked={element.curr}
-                        onStatusChange={handleStatusChange}
-                      />
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
+            <Info sx={cred.pickupX} sy={cred.pickupY} dx={cred.destX} dy={cred.destY} sortedcab={sortedcab} setSortedcab={setSortedcab}/>
           </div>
-          <div className="bg-black/70 p-4 rounded-md relative h-[95%] w-2/5 flex flex-col items-center scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-black/60 overflow-y-auto">
+          <div className="bg-black/50 p-4 rounded-md relative h-[95%] w-2/5 flex flex-col items-center scrollbar-thin scrollbar-thumb-gray-600 scrollbar-thumb-rounded-full scrollbar-track-rounded-full scrollbar-track-black/60 overflow-y-auto">
             <div className="text-white font-bold text-2xl w-full h-16 pt-4 border-b-2 border-b-white text-center"> LAST RIDES </div>
             {error && <div className="text-red-500">{error}</div>}
             {alltrip.map((element, key) => {
